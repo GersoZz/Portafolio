@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lato"> -->
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+    
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+    <header>
+        <div class="contenedor">
+            <nav class="menu">
+                <!-- 
+                <a href="">Inicio</a>
+                <a href="#">Acerca de</a>
+                <a href="#PortafolioSection">Portafolio</a>
+                <a href="#Contacto">Contacto</a> -->
+
+                <div class="navigation-wrapper">
+
+                    <div class="navigation-button">
+                        <i class="fa fa-bars"></i>
+                    </div>
+        
+                    <div class="navigation-menu">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#PortafolioSection">Portafolio</a></li>
+                            <li><a href="#Contacto">Contacto</a></li>
+<!--                             <li><a href="">TESTIMONIAL</a></li>
+                            <li><a href="">PRICING</a></li> -->
+                        </ul>
+                    </div>
+        
+                </div>                
+
+            </nav>
+            <div class="contenedor-textos-header">
+                <h1 class="titulo-header">Gerson</h1>
+                <div class="linea"></div>
+                <h2 class="subtitulo-header">Desarrollador <br><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, est?</span></h2>
+                <a href="#Contacto" class="call-to-action">Contratame ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="acerca-de">
+            <div class="contenedor">
+                <div class="contenedor-texto-acerca">
+                    <h2 class="titulo-acerca">Simple & Elegante</h2>
+                    <p class="parrafo-acerca">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni accusantium eum quidem voluptas doloremque repudiandae molestiae! Impedit molestias harum rerum, nam, quasi facilis qui maxime non eos vel dolores voluptatem!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="iconos">
+            <div class="contenedor">
+                <div class="contenedor-iconos">
+                    <div class="icono-individual">
+                        <img src="img/icono1.png" alt="">
+                        <h3>Rápido</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati magni beatae repudiandae tenetur et sit.</p>
+                    </div>
+                    <div class="icono-individual">
+                        <img src="img/icono2.png" alt="">
+                        <h3>Escalable</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati magni beatae repudiandae tenetur et sit.</p>
+                    </div>
+                    <div class="icono-individual">
+                        <img src="img/icono3.png" alt="">
+                        <h3>Responsive</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati magni beatae repudiandae tenetur et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="portafolio" id="PortafolioSection">
+            <div class="contenedor">
+                <div class="contenedor-textos-portafolio">
+                    <h2 class="titulo-portafolio">Haz de tu trabajo algo extarordinario</h2>
+                    <p class="parrafo-portafolio">Contáctame si estás preparado.</p>
+                </div>
+                <div class="contenedor-portafolio">
+                    <a href="https://gersozz.github.io/Simon/" target="_blank"><img src="img/1.png" alt=""></a>
+                    <a href="https://genhorario.web.app/" target="_blank"> <img src="img/2.png" alt=""> </a>
+                    <a href="#"><img src="img/3.jpg" alt=""></a>
+                    <a href="#"><img src="img/4.jpg" alt=""></a>
+                    <a href="#"><img src="img/5.jpg" alt=""></a>
+                    <a href="#"><img src="img/6.jpg" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer id="Contacto">
+        <div class="contenedor">
+            <div class="footer-textos">
+                <h2 class="titulo-footer">Contáctame</h2>
+                <p class="titulo-parrafo">O le temes al éxito?</p>
+                <form action="" method="post" class="formulario">
+                    <input type="text" name="nombre" placeholder="Nombre" id="" class="nombre-contacto">
+                    <input type="email" name="email" placeholder="Correo" id="" class="nombre-correo">
+                    <textarea name="mensaje" class="mensaje" placeholder="Mensaje:"></textarea>
+
+                    <div class="derecha">
+                        <input type="submit" value="Contactar" class="boton-envio">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/17eb9424c5.js" crossorigin="anonymous"></script>
+    <script>
+        
+    var navButton = document.querySelector('.navigation-button');
+    var navMenu = document.querySelector('.navigation-menu');
+    var win = window;
+    
+    function openMenu(event) {
+      
+      navButton.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    
+      event.preventDefault();
+      event.stopImmediatePropagation();//pa k no cierre xdxd>_
+    }
+      
+    function closeMenu(event) {
+      if (navButton.classList.contains('active')) {
+        navButton.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    }
+    
+    navButton.addEventListener('click', openMenu, false);
+    
+    win.addEventListener('click',closeMenu, false);
+
+    /*  boton */
+    
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>

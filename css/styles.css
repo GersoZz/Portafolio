@@ -1,0 +1,478 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;/*chekar*/
+}
+
+body{
+    font-family: 'lato';
+    font-size: 16px;
+    background: #fff;
+}
+
+
+
+.container {
+    width: 80%;
+    height: 40px;
+    position: relative;
+    top: 40px;/* que signifca eso? */
+    margin: 0 auto;
+  }
+  
+  #logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+  }
+
+  .navigation-wrapper {
+    position: relative;
+  }
+  .navigation-button {
+    will-change: transform;/*  */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 1;
+    top: 5vh;
+    right: 5vw;
+    /* margin: 10px; */
+    background: transparent;
+    cursor: pointer;
+  }
+
+  /* borde al icono */
+.navigation-button .fa {
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    color: black;
+} 
+  
+.navigation-menu ul li {
+    list-style: none;/* sin bullets */
+    font-family: impact;
+    font-weight: 300;
+    color: hsl(0,0%,70%);
+}
+
+.navigation-menu {
+    content: '';/* ????  */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 35%;
+    background: #fff;
+    height: 100%;
+    transform: skewX(0deg) translate(100%,0);/* ?? */
+    transform-origin: top right;
+    transition: all .2s ease-in;
+    z-index: +1; /* estaba en -1 */
+}
+
+.navigation-menu ul {
+    transform: skewX(-8deg);
+    transform-origin: top left;
+    position: fixed;
+    right: 10vw;
+    top: 10vh;/* 120px */
+    width: 400px;
+    text-align: right;
+  
+}
+
+.navigation-menu ul li {
+      position: relative;
+      z-index: 999;
+      font-size: 32px;
+      color: hsl(0,0%,10%);
+      line-height: 64px;
+}
+
+.navigation-menu ul li  a {
+    border: none;
+    color:#403e27;
+    text-decoration: none;
+}
+
+.navigation-menu ul li a:hover{
+    text-decoration: underline;
+}
+  
+  .navigation-menu.active {
+      transform: skewX(8deg) translate(0,0);
+  }
+  
+  .navigation-menu li {
+    opacity: 0;
+    /* transform: translate(0, 50px); */
+    transition: all .0s ease-in .3s;
+    
+  }
+  .navigation-menu.active li {
+    opacity: 1;
+    /* es necsario??? */
+    /* transform: translate(0,0); */
+    transition: all .2s ease-in 0s;
+  }
+  .navigation-menu.active li:nth-child(1) {
+    transition-delay: .3s;
+  }
+  .navigation-menu.active li:nth-child(2) {
+    transition-delay: .4s;
+  }
+  .navigation-menu.active li:nth-child(3) {
+    transition-delay: .5s;
+  }
+  .navigation-menu.active li:nth-child(4) {
+    transition-delay: .6s;
+  }
+  .navigation-menu.active li:nth-child(5) {
+    transition-delay: .7s;
+  }
+  .navigation-menu.active li:nth-child(6) {
+    transition-delay: .8s;
+  }
+  
+
+
+.contenedor{
+    width:90%;
+    max-width: 1000px;
+    margin:auto;/* esto como que lo centra ;ooo  */
+    overflow:hidden;/* x si algo sale del sitio web y q no se pierda el maketado :O  */
+}
+
+header{
+    width:100%;
+    height:600px;
+    /* background-image: url(../img/portada.png); */
+    background-image: url(../img/portada.png);
+    /* background-color: #999; */
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -10000;
+}
+
+header .menu{
+    /* text-align: right; */
+    display: flex;
+    justify-content: flex-end;
+    margin:20px 0;
+}
+
+header .menu a{
+    display: inline-block;
+    padding:15px 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color:#fff;
+    font-weight: 300;
+}
+
+header .menu a:hover{
+    text-decoration: underline;
+}
+
+header .contenedor-textos-header{
+    margin:150px 0px;
+    text-align: center;
+}
+
+header .contenedor-textos-header .titulo-header{
+    font-size: 100px;
+    color:#fff;
+    margin-bottom: 5px;
+
+}
+
+header .contenedor-textos-header .linea{
+    width:600px;
+    margin:auto;
+    height:3px;
+    background: #15a4fa;
+    margin-bottom: 20px;
+}
+
+header .contenedor-textos-header .subtitulo-header{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;/* se ve muy gordita en comparacion */
+    margin-bottom: 20px;
+}
+
+header .contenedor-textos-header .call-to-action{
+    display:inline-block;
+    padding: 15px 15px;
+    border: 1px solid #15a4fa;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius:3px;
+
+}
+header .contenedor-textos-header .call-to-action:hover{
+    background: #15a4fa;
+    color: #fff; /* esta dem[as */
+}
+
+main .acerca-de{
+    background: #f0f3f5;
+    padding: 45px 0;
+    text-align: center;
+}
+
+main .acerca-de .contenedor-texto-acerca .titulo-acerca{
+    font-size:24px;
+    font-weight: 900;
+    /* color: #999999; */
+    margin-bottom: 20px;
+}
+
+main .acerca-de .contenedor-texto-acerca .parrafo-acerca{
+    color: #999;
+    font-weight:600;
+    margin-bottom: 20px;
+}
+
+main .iconos{
+    padding:30px 0;
+    background:#fff;
+
+}
+
+.contenedor-iconos{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contenedor-iconos .icono-individual{
+    width:33%;
+    margin:20px 10px;
+}
+
+.contenedor-iconos .icono-individual h3{
+    margin: 10px 0;
+}
+
+main .portafolio{
+    background: #f0f3f5;
+    padding: 60px 0;
+}
+
+main .contenedor-textos-portafolio{
+    text-align: center;
+}
+main .contenedor-textos-portafolio .titulo-portafolio{
+    font-weight: 900;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+main .contenedor-textos-portafolio .parrafo-portafolio{
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 60px;
+}
+
+main .portafolio .contenedor-portafolio{
+    display: flex;
+    flex-wrap: wrap;/* q hace?  para q se vaya a la otral inea?*/   
+    justify-content: space-between;
+}
+/* main .portafolio .contenedor-portafolio img{ */
+main .portafolio .contenedor-portafolio a{
+    width:32%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+main .portafolio .contenedor-portafolio img{
+    width: 100%;
+}
+
+main .portafolio .contenedor-portafolio img:hover{
+    opacity: .6;
+}
+
+footer{
+    width:100%;
+    height:600px;
+    padding:60px 0;
+    background-image: url(../img/footer.png);
+}
+
+footer .footer-textos{
+    text-align: center;
+    color:#fff;
+
+}
+
+footer .footer-textos .titulo-footer{
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+footer .footer-textos .titulo-parrafo{
+    font-weight: 300;
+    color:#999;
+    margin-bottom: 45px;
+}
+
+footer .formulario{
+    display:flex;
+    flex-direction: column; 
+}
+
+footer .formulario .nombre-contacto, footer .formulario .nombre-correo, footer .formulario .mensaje{
+    display: inline-block;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: none;
+    border:1px solid #999;
+    color: #999;
+    border-radius: 3px;
+    font-family: 'lato';
+    font-weight: 300;
+    font-size: 14px;
+
+}
+
+footer .formulario .mensaje{
+    min-width:100%;
+    max-width:100%;
+
+    min-height: 150px;
+    max-height: 150px;
+}
+
+footer .formulario .derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .formulario .boton-envio{
+    display: inline-block;
+    padding: 10px 15px;
+    background: none;
+    border: 1px solid #15a4fa;
+    color : #fff;
+    border-radius: 3px;
+}
+
+footer .formulario .boton-envio:hover{
+    background: #15a4fa;
+    color: #fff; /* pq otra vez color? */
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:800px){
+    .navigation-menu {
+        width: 40%;
+    }
+}
+@media screen and (max-width:600px){
+    header .menu{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header .contenedor-textos-header{
+        margin: 100px 0px;
+    }
+
+    .contenedor-iconos{
+        flex-direction:column
+    }
+
+    .contenedor-iconos .icono-individual{
+        width:90%;
+        /* margin-bottom: 40px auto; */
+        margin: 10px auto;/* realmente funciona esto?? a los lados auto!? */
+        justify-content: center;
+        
+    }
+
+    .navigation-menu {
+        width: 45%;
+    }
+
+    main .portafolio .contenedor-portafolio{
+        flex-wrap: wrap;
+        justify-content: space-around;/* vs space beetween!? */
+    }
+
+    main .portafolio .contenedor-portafolio a{
+        width:48%;
+        /* margin: auto; */
+    }
+}
+
+@media screen and (max-width:500px){
+        
+
+
+    .navigation-menu {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    header .contenedor-textos-header .titulo-header{
+        font-size:60px
+    }
+
+    header span{
+        display:none;
+    }
+
+    header{
+        height: 525px;
+    }
+
+    .navigation-menu {
+        width: 55%;
+    }
+
+}
+
+@media screen and (max-height:500px){
+
+    .navigation-menu ul li {
+        line-height: 40px; 
+    }
+}
+
+
+/* gaa */
+
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    /* outline: none; */
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+  
